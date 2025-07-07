@@ -1,16 +1,18 @@
-export const tf = {
-    "survivor": {
-        "name": "求生者",
-        "treeData": {
+export const TFMAP = {
+    survivor: {
+        name: "求生者",
+        treeData: {
+            name: "root",
             L1: {
                 id: "L1",
-                name: "关系场",
+                name: "关系场", 
                 label: 1,
                 content: "被监管者持续追击超过5秒后，若离开监管者的警戒范围且该监管者不处于追击状态，则会向所有求生者显示监管者的轮廓，持续3秒，冷却时间80秒<br>被施加该效果的监管者在轮廓显示结束后的40秒内将免疫该效果",
                 boshi: null,
                 lianhe: null,
                 taluo: "被敌方骑士持续追击超过5秒后，若离开敌方骑士的警戒范围且该监管者不处于追击状态，则会向所有队友显示敌方骑士的轮廓，持续3秒，冷却时间80秒<br>被施加该效果的敌方骑士在轮廓显示结束后的40秒内将免疫该效果",
                 describe: "你的努力，其他人也能受益",
+                childCount: 3,
                 1: {
                     id: "L1-1",
                     name: "幸存者本能",
@@ -20,6 +22,7 @@ export const tf = {
                     lianhe: null,
                     taluo: null,
                     describe: "至暗之处，方可见至亮之光",
+                    childCount: 2,
                     1: {
                         id: "L1-1-1",
                         name: "愈合",
@@ -28,7 +31,8 @@ export const tf = {
                         boshi: null,
                         lianhe: null,
                         taluo: null,
-                        describe: "强大的意志力造就了强大的身躯！"
+                        describe: "强大的意志力造就了强大的身躯！",
+                        childCount: 0
                     },
                     2: {
                         id: "L1-1-2",
@@ -38,7 +42,8 @@ export const tf = {
                         boshi: null,
                         lianhe: null,
                         taluo: null,
-                        describe: "感受到过载压力时，自我防御开启"
+                        describe: "感受到过载压力时，自我防御开启",
+                        childCount: 0
                     }
                 },
                 2: {
@@ -50,6 +55,7 @@ export const tf = {
                     lianhe: null,
                     taluo: "破译密码机触电，会显示敌方骑士的位置3/5/7秒",
                     describe: "得与失，往往在一线之间…",
+                    childCount: 1,
                     1: {
                         id: "L1-2-1",
                         name: "韦伯定律",
@@ -59,15 +65,17 @@ export const tf = {
                         lianhe: null,
                         taluo: "被敌方骑士在其18米范围内持续追击3秒时，立即增加10%/15%/20%移动速度，持续3.5秒，该效果一局仅触发一次",
                         describe: "只有第一次才是最大的刺激",
-                        laster: {
-                            id: "L1-laster",
+                        childCount: 1,
+                        1: {
+                            id: "L1-2-1-1",
                             name: "飞轮效应",
                             label: 1,
                             content: "携带该特质会获得主动技能-飞轮效应，技能效果：向角色面朝方向冲刺3.5米，0.4秒内免疫绝大多数伤害和控制，冷却时间135秒，开局冷却时间50秒",
                             boshi: null,
                             lianhe: null,
                             taluo: null,
-                            describe: "万事开头难！"
+                            describe: "万事开头难！",
+                            childCount: 0
                         }
                     }
                 },
@@ -80,6 +88,7 @@ export const tf = {
                     lianhe: "显示18米内求生者队友，与未被监管者追击的受伤队友相互可见",
                     taluo: null,
                     describe: "别担心，我来帮你",
+                    childCount: 2,
                     1: {
                         id: "L1-3-1",
                         name: "共生效应",
@@ -88,7 +97,8 @@ export const tf = {
                         boshi: "奔向倒地的求生者时，移动速度增加6%~10%，距离倒地的求生者越远移动速度的增加量越大",
                         lianhe: null,
                         taluo: "奔向被挂上狂欢之椅的己方国王时，移动速度增加6%~10%，距离国王越远移动速度的增加量越大",
-                        describe: "也许你能拯救的，不仅仅只有自己"
+                        describe: "也许你能拯救的，不仅仅只有自己",
+                        childCount: 0
                     },
                     2: {
                         id: "L1-3-2",
@@ -98,7 +108,338 @@ export const tf = {
                         boshi: null,
                         lianhe: null,
                         taluo: null,
-                        describe: "踮起脚尖，因为脚印会出卖一切"
+                        describe: "踮起脚尖，因为脚印会出卖一切",
+                        childCount: 0
+                    }
+                }
+            },
+            L2: {
+                id: "L2",
+                name: "好奇心", 
+                label: 1,
+                content: "当求生者处于可自由行动的状态且不在破译密码时，显示最近一台未完全破译密码机的轮廓，当场上仅剩3台未完全破译的密码机时，显示所有密码机的轮廓，持续5秒",
+                boshi: null,
+                lianhe: null,
+                taluo: null,
+                describe: "谁能控制住对解密的好奇心？",
+                childCount: 3,
+                1: {
+                    id: "L2-1",
+                    name: "分心",
+                    label: 1,
+                    content: "逃脱门通电后，显示监管者5秒",
+                    boshi: null,
+                    lianhe: null,
+                    taluo: null,
+                    describe: "不要懈怠——牢记：黎明之前，最为黑暗",
+                    childCount: 2,
+                    1: {
+                        id: "L2-1-1",
+                        name: "假寐",
+                        label: 3,
+                        content: "减缓狂欢之椅上3%/6%/9%起飞倒计时速度",
+                        boshi: "减缓倒地被淘汰3%/6%/9%的速度",
+                        lianhe: null,
+                        taluo: null,
+                        describe: "仅靠假装，并不会改变现有的一切",
+                        childCount: 0
+                    },
+                    2: {
+                        id: "L2-1-2",
+                        name: "触摸效应",
+                        label: 3,
+                        content: "成功治疗自己或队友时，被治疗的目标立即增加15%/25%/35%移动速度，持续1.5秒，不处于追击状态时，加速时间延长3秒",
+                        boshi: null,
+                        lianhe: null,
+                        taluo: null,
+                        describe: "危险中的紧急疗愈，更加振奋人心",
+                        childCount: 0
+                    }
+                },
+                2: {
+                    id: "L2-2",
+                    name: "不屈不挠",
+                    label: "0/3",
+                    content: "倒地自愈速度提高10%/15%/20%，倒地移动速度提高30%/60%/90%",
+                    boshi: null,
+                    lianhe: null,
+                    taluo: null,
+                    describe: "永远不会真正倒下!",
+                    childCount: 1,
+                    1: {
+                        id: "L2-2-1",
+                        name: "逃逸",
+                        label: 3,
+                        content: "逃脱门通电后，立刻增加3%/4%/5%移动速度，持续120秒",
+                        boshi: null,
+                        lianhe: null,
+                        taluo: "己方破译进度满300%时，立刻增加3%/4%/5%移动速度，持续60秒",
+                        describe: "如果你只懂得逃跑，那就逃吧！",
+                        childCount: 1,
+                        1: {
+                            id: "L2-2-1-1",
+                            name: "回光返照",
+                            label: "0/1",
+                            content: "逃脱门通电后，立刻恢复一半恐惧值并增加50%冲刺速度，持续5秒",
+                            boshi: null,
+                            lianhe: null,
+                            taluo: "己方破译进度满300%时，立刻恢复一半恐惧值并增加50%冲刺速度，持续5秒",
+                            describe: "最后的一线希望会导向什么结局？",
+                            childCount: 0
+                        }
+                    }
+                },
+                3: {
+                    id: "L2-3",
+                    name: "心灵感应",
+                    label: 1,
+                    content: "逃脱门通电后，每40秒显示所有求生者5秒",
+                    boshi: null,
+                    lianhe: null,
+                    taluo: "逃脱门通电后，每40秒显示队友5秒",
+                    describe: "你不是一个人！",
+                    childCount: 2,
+                    1: {
+                        id: "L2-3-1",
+                        name: "结伴效应",
+                        label: 1,
+                        content: "从狂欢之椅上被救下后，自身获得28%的移速加成，持续2秒",
+                        boshi: "倒地状态下被队友成功治疗后，自身获得28%的移速加成，持续2秒",
+                        lianhe: null,
+                        taluo: null,
+                        describe: "跟上同伴，逃离这里",
+                        childCount: 0
+                    },
+                    2: {
+                        id: "L2-3-2",
+                        name: "观众效应",
+                        label: 1,
+                        content: "有其他求生者处于狂欢之椅上时，自身破译密码机速度增加8%。当场上有两台密码机破译完成时永久失去该效果",
+                        boshi: "有其他求生者处于倒地状态时，自身破译密码机速度增加8%。当场上有两台密码机破译完成时永久失去该效果",
+                        lianhe: null,
+                        taluo: "我方国王处于狂欢之椅上时，自身破译密码机速度增加8%。当场上有两台密码机破译完成时永久失去该效果",
+                        describe: "观众已经就位，需要更加卖力地表演了",
+                        childCount: 0
+                    }
+                },
+            },
+            L3: {
+                id: "L3",
+                name: "鸟笼效应", 
+                label: 1,
+                content: "当有其他求生者与自己身处地下室内时，自身移动速度提升10%，受击加速效果提升20%",
+                boshi: "",
+                lianhe: "当有其他求生者与自己身处同一地下室内时，自身移动速度提升10%，受击加速效果提升20%",
+                taluo: "",
+                describe: "配上金丝雀的空鸟笼，才格外赏心悦目",
+                childCount: 3,
+                1: {
+                    id: "L3-1",
+                    name: "悄无声息",
+                    label: 1,
+                    content: "当有其他求生者被放上狂欢之椅时，在狂欢之椅22米半径范围内，跑动过程中不会留下脚印",
+                    boshi: "在倒地求生者附近22米半径范围内，跑动过程中不会留下脚印",
+                    lianhe: "",
+                    taluo: "当己方国王被放上狂欢之椅时，在狂欢之椅22米半径范围内，跑动过程中不会留下脚印",
+                    describe: "现在的我…永远没有人能听见！",
+                    childCount: 2,
+                    1: {
+                        id: "L3-1-1",
+                        name: "医者",
+                        label: 3,
+                        content: "受伤自愈和治疗他人的速度提高15%/20%/25%。",
+                        boshi: "",
+                        lianhe: "",
+                        taluo: "",
+                        describe: "久病成医，但顽疾难祛",
+                        childCount: 0
+                    },
+                    2: {
+                        id: "L3-1-2",
+                        name: "避难所",
+                        label: 3,
+                        content: "每在狂欢之椅上救下求生者后，增加10%/20%/30%倒地自愈和被治疗的速度，可叠加2层",
+                        boshi: "",
+                        lianhe: "",
+                        taluo: "",
+                        describe: "劫后余生的人会向你祈求最后一丝抚慰和疗伤",
+                        childCount: 0
+                    }
+                },
+                2: {
+                    id: "L3-2",
+                    name: "救世主情结",
+                    label: 3,
+                    content: "从狂欢之椅上救下队友后，自身获得5%/10%/15%的移速加成，持续3秒",
+                    boshi: "成功治疗倒地队友后，自身获得5%/10%/15%的移速加成，持续3秒",
+                    lianhe: "",
+                    taluo: "",
+                    describe: "拯救那些受困的人，能给我们指引光的讯息与爱的鼓励",
+                    childCount: 1,
+                    1: {
+                        id: "L3-2-1",
+                        name: "从众心理",
+                        label: 3,
+                        content: "当有其他求生者被放上狂欢之椅时，在狂欢之椅12/18/24米半径范围内，自身移动速度增加4%/6%/8%",
+                        boshi: "在倒地求生者附近12/18/24米半径范围内，自身移动速度增加4%/6%/8%",
+                        lianhe: "",
+                        taluo: "当己方国王被放上狂欢之椅时，在狂欢之椅12/18/24米半径范围内，自身移动速度增加4%/6%/8%",
+                        describe: "已经有人成为榜样了，你想成为下一个么？",
+                        childCount: 1,
+                        1: {
+                            id: "L3-2-1-1",
+                            name: "化险为夷",
+                            label: 1,
+                            content: "当在狂欢之椅上成功救下求生者后，自身和该求生者会进入20秒无敌时间，期间不会进入倒地状态，不能被治疗；期间受到的导致倒地的伤害将在无敌时间过后瞬间生效；成功救下求生者后，施救者的该天赋不会再次触发",
+                            boshi: "成功治疗倒地的求生者后自身和该求生者会进入20秒无敌时间，期间不会进入倒地状态，不能被治疗；期间受到的导致倒地的伤害将在无敌时间过后瞬间生效；成功救下求生者后，施救者的该天赋不会再次触发",
+                            lianhe: "",
+                            taluo: "",
+                            describe: "不要放弃，才能创造奇迹",
+                            childCount: 0
+                        }
+                    }
+                },
+                3: {
+                    id: "L3-3",
+                    name: "宣泄效应",
+                    label: 1,
+                    content: "受击加速持续时间延长0.3秒",
+                    boshi: "",
+                    lianhe: "",
+                    taluo: "",
+                    describe: "将恐惧的压力转化成动力吧！",
+                    childCount: 2,
+                    1: {
+                        id: "L3-3-1",
+                        name: "寒意",
+                        label: 1,
+                        content: "36米范围内监管者在你身后看着你时，会持续提示监管者方向",
+                        boshi: "",
+                        lianhe: "",
+                        taluo: "36米范围内敌方骑士在你身后看着你时，会持续提示敌方骑士方向",
+                        describe: "被盯上的猎物总会感到一丝毛骨悚然的寒意",
+                        childCount: 0
+                    },
+                    2: {
+                        id: "L3-3-2",
+                        name: "共情",
+                        label: 1,
+                        content: "有求生者倒地后，增加20%的移动速度，持续6秒，当附近16米范围内有监管者或队友离开倒地状态时，效果立即结束，冷却30秒",
+                        boshi: "",
+                        lianhe: "",
+                        taluo: "有求生者队友倒地后，增加20%的移动速度，持续6秒，当附近16米范围内有敌方骑士或队友离开倒地状态时，效果立即结束，冷却30秒",
+                        describe: "受害者带来的共情，更加触目惊心",
+                        childCount: 0
+                    }
+                }
+            },
+            L4: {
+                id: "L4",
+                name: "火中取栗",
+                label: 1,
+                content: "从狂欢之椅上救人速度增加40%",
+                boshi: "",
+                lianhe: "",
+                taluo: "",
+                describe: "这双手甚至能解下受难耶稣的荆棘之冠",
+                childCount: 3,
+                1: {
+                    id: "L4-1", 
+                    name: "囚徒困境",
+                    label: 1,
+                    content: "当有其他玩家被绑上气球上时，额外显示监管者和该玩家时间5秒，放上狂欢之椅后显示效果消失",
+                    boshi: "",
+                    lianhe: "",
+                    taluo: "当有己方国王被绑上气球上时，额外显示敌方骑士和己方国王时间5秒，放上狂欢之椅后显示效果消失",
+                    describe: "救，还是不救？——其实你心里早有答案了，对吧",
+                    childCount: 2,
+                    1: {
+                        id: "L4-1-1",
+                        name: "巨力",
+                        label: 3,
+                        content: "巨大的力量使你用木板击中监管者后，监管者的眩晕恢复速率将减少10%/15%/20%",
+                        boshi: "",
+                        lianhe: "",
+                        taluo: "",
+                        describe: "千钧一发才能激发出真正的潜能",
+                        childCount: 0
+                    },
+                    2: {
+                        id: "L4-1-2",
+                        name: "求生意志",
+                        label: 3,
+                        content: "绑上气球上的挣扎速度增加10%/15%/20%",
+                        boshi: "",
+                        lianhe: "",
+                        taluo: "",
+                        describe: "如同搁浅的鲸鱼，不挣扎，就剩绝望",
+                        childCount: 0
+                    }
+                },
+                2: {
+                    id: "L4-2",
+                    name: "马蝇效应",
+                    label: 3,
+                    content: "15米范围内存在监管者持续8秒，放板速度提升8%/14%/20%",
+                    boshi: "",
+                    lianhe: "",
+                    taluo: "15米范围内存在敌方骑士持续8秒，放板速度提升8%/14%/20%",
+                    describe: "你可以再快一点",
+                    childCount: 1,
+                    1: {
+                        id: "L4-2-1",
+                        name: "肌肉记忆",
+                        label: 3,
+                        content: "跨越木板和窗户的交互速度提升5%/10%/15%，冷却时间25秒",
+                        boshi: "",
+                        lianhe: "",
+                        taluo: "",
+                        describe: "成熟的猎物．往往具备高效逃脱的手段",
+                        childCount: 1,
+                        1: {
+                            id: "L4-2-1-1",
+                            name: "膝跳反射",
+                            label: 1,
+                            content: "跨越窗户后，冲刺时增加50%移动速度，持续时间3秒，冷却时间40秒<br>跨越木板后，冲刺时增加50%移动速度，持续时间3秒，冷却时间40秒<br>两种效果的冷却时间独立计算，若在监管者的警戒范围外触发，则移动速度的增加值降低为25%",
+                            boshi: "",
+                            lianhe: "",
+                            taluo: "跨越窗户后，冲刺时增加50%移动速度，持续时间3秒，冷却时间40秒<br>跨越木板后，冲刺时增加50%移动速度，持续时间3秒，冷却时间40秒<br>两种效果的冷却时间独立计算，若在敌方骑士的警戒范围外触发，则移动速度的增加值降低为25%",
+                            describe: "危机感不过是另一种强烈的刺激而已",
+                            childCount: 0
+                        }
+                    }
+                },
+                3: {
+                    id: "L4-3",
+                    name: "绝处逢生",
+                    label: 1,
+                    content: "倒地后可以突破自愈上限，自行恢复到受伤状态；同场游戏中只能恢复1次",
+                    boshi: "",
+                    lianhe: "",
+                    taluo: "倒地后可以突破自愈上限，自行恢复到受伤状态；无视自愈次数限制。",
+                    describe: "在这个危险的游戏中，你最需要依靠的还是自己",
+                    childCount: 2,
+                    1: {
+                        id: "L4-3-1",
+                        name: "酝酿效应",
+                        label: 1,
+                        content: "破译加速阶段开始后，求生者在非破译状态的破译速度每秒增加1%，最多增加12%，开始破译10秒后或脱离破译状态时，该增益效果清除。",
+                        boshi: "",
+                        lianhe: "",
+                        taluo: "",
+                        describe: "稍许的搁置，或许能带来新的思路",
+                        childCount: 0
+                    },
+                    2: {
+                        id: "L4-3-2",
+                        name: "感觉适应",
+                        label: 1,
+                        content: "16米范围内监管者通过交互行为破坏木板或翻越窗户时，显示监管者轮廓，持续5秒，冷却时间16秒",
+                        boshi: "",
+                        lianhe: "",
+                        taluo: "16米范围内敌方骑士通过交互行为破坏木板或翻越窗户时，显示敌方骑士轮廓，持续5秒，冷却时间16秒",
+                        describe: "你的视觉和听觉早已适应身处庄园游戏之中",
+                        childCount: 0
                     }
                 }
             }
