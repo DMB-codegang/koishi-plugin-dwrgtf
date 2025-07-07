@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-dwrgtf",
   "description": "一个可以查询第五人格天赋的插件",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
