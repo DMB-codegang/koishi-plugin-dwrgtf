@@ -5,7 +5,6 @@ import fs from 'fs';
 import path from 'path';
 
 export async function tfToBigimage(ctx: Context, name: string): Promise<string> {
-
   if (!ctx.puppeteer) return 'puppeteer异常';
 
   const configPath = path.join(__dirname, 'assets', 'config.json');
@@ -26,8 +25,6 @@ export async function tfToBigimage(ctx: Context, name: string): Promise<string> 
   })
   if (id == '') return '未找到该节点';
 
-  // console.log(`节点为：${id}`)
-
   await page.locator(`#skill-node-${id}`).click()
   await page.locator(`#skill-node-${id}`).click()
   await new Promise(r => setTimeout(r, 500));
@@ -44,3 +41,4 @@ export async function tfToBigimage(ctx: Context, name: string): Promise<string> 
   await page.close();
   return `data:image/jpeg;base64,${outputImageBase64}`;
 }
+

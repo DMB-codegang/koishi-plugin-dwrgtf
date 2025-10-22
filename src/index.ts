@@ -60,8 +60,4 @@ export function apply(ctx: Context) {
       return `没有找到名为${TfName}的天赋`;
     }
   })
-
-  ctx.command('test').action(async ({ session }) => {
-    session.send(h.image(await tfToBigimage(ctx, '飞轮效应')))
-  })
 }
